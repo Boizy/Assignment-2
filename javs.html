@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style type="text/css">
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    background-color: lightgray;
+    padding: 0;
+    margin: 0;    
+}
+h1 { 
+    text-align: center;
+}
+input{
+    width: 15%;
+    height: 4em;
+    color: darkblue;
+    background: orangered;
+    font-size: 1.1em;
+
+}
+input:hover{
+    width: 15%;
+    height: 4em;
+    color:orangered;
+    background: darkblue ;
+}
+
+</style>
+</head>
+<body>
+    <div>
+  <header><h1>
+      Assignment 2 on Javascript
+  </h1></header>
+</div>
+<div>
+    <h2>Problem Statement:</h2>
+    <p><strong>NASA</strong> wants to send astronauts to <strong>Mars.</strong>
+         But there need to carry aloong with enough food and oxygen to keep them alive for the period of time they will be staying in Mars.
+          <strong>What amount of compressed Oxygen is needed for the Trip if 1 liter of compressed Oxygen can serve a single astronaut for 12 hours</strong>
+        <br><br>
+        <strong><i>NOTE: there are 10 astronauts.</i></strong>
+    </p>
+    <h2>Assumptions</h2>
+        <p>
+            <ol>
+                <li>
+                The space ship they are going with will not enter Mars with them. And so as a result of that
+                and planetary movement. Hence they need to wait for Mars to complete one full revolution so
+                as for the position of the spaceship to align with they landing position on Mars before they can
+                leave Mars to the spaceship.</li>
+                <br>
+                <li>The spaceship moves at a speed of 1000Km/hour</li>
+            </ol>
+                <strong> HINT:</strong><br> Find out the distance from Earth to Mars and how long it takes Mars to complete a
+                revolution, then use those parameters to calculate the amount of compressed Oxygen needed
+                for trip.
+        </p>
+</div>
+<h1>SOLUTION &#x1F605</h1>
+<input type="button" value="Show Answer&#x1F643" onclick="showAlert()">
+
+<script>
+    //number of astronauts is 10
+        var num = 10;
+    //accordinng my research, the distance between the Earth and Mars is 225million kilometer,
+        var dis = 225000000;
+    //it takes 24.6hours for Mars to complete one revolution.
+        var rev = 24.6;
+    //The spaceship moves at a speed of 1000Km/hour
+        var speed = 1000;
+    //The time from earth to mars is the division of distance by speed
+        var time = dis/speed;
+    //Total time will be the addition of the time for the mars' revolution and the time for the travel from earth to mars
+        var totalTime = time + rev;
+    
+    // for one astronaut needs 1 litre for 12 hours, therefore for all the trip thus;
+         var one = totalTime / 12;
+    // for total astronauts
+        var totalAst = one * num;
+        function showAlert(){
+            var mytext ="Each Astronaut will consume "+one+"litres of compressed Oxygen. Therefore, it will take "+totalAst+"litres of compressed Oxygen for the whole crew of 10 Astronauts. Thank you!";
+            alert(mytext);
+        }
+
+    
+</script>
+</body>
+</html>
